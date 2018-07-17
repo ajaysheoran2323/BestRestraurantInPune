@@ -1,4 +1,4 @@
-# super-tribble (Zomato dataset + MatplotLib + SeaBorn + pandas)
+# What and where to eat in Pune(Zomato Dataset + MatplotLib + SeaBorn + pandas + Map Location for restaurant)
 From Zomato's dataset and implemented only for Pune location, find out which is the best continental restaraunt in Pune by vistalization
 
 #API for Zomato Dataset
@@ -11,13 +11,13 @@ Codes below are more specific to Pune location only because I live there.
 # Best Continental and North Indian restaurant in Pune -*-
 
 
-##============import the libraries============
+## ============import the libraries============
 ```import numpy as np #to import for mathematical calculations
 import matplotlib.pyplot as plt #plot the charts.
 import pandas as pd
 ```
 
-##=============read csv=======================
+### =============read csv=======================
 ```dataset = pd.read_csv('zomato.csv')
 
 dataset = dataset.drop(['Country Code', 'Currency', 'Is delivering now', 'Switch to order menu',  ], axis=1)
@@ -35,14 +35,14 @@ rating = new_dataset_city.iloc[:,11].values
 Avg_cost_for_two = new_dataset_city.iloc[:, 7].values
 ```
 
-##======visualizing the result---avg_cost_for_two vs rating==============
+### ======visualizing the result---avg_cost_for_two vs rating==============
 ```
 plt.figure(figsize = (12, 10), facecolor = None)
 import seaborn as sns
 sns.set_style("darkgrid")
 plot1 = sns.barplot(x="Aggregate rating", y="Average Cost for two", data=new_dataset_city)
 ```
-##=======================================================================
+### =================================Food Breakup===================================
 ```
 types = {
     "Breakfast and Coffee" : ["Cafe Coffee Day", "Starbucks", "Barista", "Costa Coffee", "Chaayos", "Dunkin' Donuts"],
@@ -59,13 +59,13 @@ north_indian = new_dataset_city.loc[new_dataset_city['Restaurant Name'].isin(typ
 
 ```
 
-##======================================Avg rating vs cafe visualization=================
+### ======================================Avg rating vs cafe visualization=================
 ```
 cafe_name = new_dataset_city.iloc[:,0].values
 Avg_cost_for_two = new_dataset_city.iloc[:, 7].values
 ```
 
-##======visualizing the result---Cafe_name vs rating==============
+### ======visualizing the result---Cafe_name vs rating==============
 ```
 plt.figure(figsize = (8, 6), facecolor = None)
 sns.set_style("darkgrid")
@@ -77,7 +77,7 @@ plot2.set_xticklabels(new_dataset_city['Restaurant Name'], rotation=90, ha="cent
 plot2.set(xlabel='Restaurant Name', ylabel=u'Average Cost for two')
 plot2.set_title('Cafe_name vs Avg_cost_for_two')
 ```
-##======================Location for Breakfast===================================================
+### ======================Location for Breakfast===================================================
 
 ```
 breakfast_locations = breakfast[['Restaurant Name','Locality Verbose' ,'City',
@@ -90,8 +90,8 @@ continental_X = continental.iloc[:,0].values
 continental_X = pd.DataFrame(continental_X)
 continental_Y = continental.iloc[:,12].values
 ```
-
-##==============visualizing North Indian and continental food in Pune===============================
+### I am more inclined to North Indian Food, Lets check that out
+### ==============visualizing North Indian and continental food in Pune===============================
 ```
 plt.figure(figsize = (10, 8), facecolor = None)
 sns.set_style("darkgrid")
