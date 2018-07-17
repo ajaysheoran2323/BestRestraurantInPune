@@ -91,6 +91,7 @@ continental_X = continental.iloc[:,0].values
 continental_X = pd.DataFrame(continental_X)
 continental_Y = continental.iloc[:,12].values
 ```
+
 ##==============visualizing North Indian and continental food in Pune===============================
 ```
 plt.figure(figsize = (10, 8), facecolor = None)
@@ -99,7 +100,9 @@ x_ax1 = continental['Restaurant Name']
 y_ax1 = continental['Aggregate rating'].apply(lambda x: round(x,2))
 plot3 = sns.barplot(x=x_ax1, y=y_ax1, data=continental)
 plot3.set_xticklabels(continental['Restaurant Name'], rotation=45, ha="center")
-
+```
+![figure_1](https://user-images.githubusercontent.com/31384241/42827804-e525bb98-8a04-11e8-8ca4-b583421af7ea.png)
+```
 plt.figure(figsize = (10, 8), facecolor = None)
 sns.set_style("darkgrid")
 x_ax2 = continental['Restaurant Name']
@@ -109,4 +112,4 @@ plot4.set_xticklabels(continental['Restaurant Name'], rotation=40, ha="center")
 ```
 
 ![figure_2](https://user-images.githubusercontent.com/31384241/42827803-e4f5714a-8a04-11e8-9167-7a705ff9751c.png)
-![figure_1](https://user-images.githubusercontent.com/31384241/42827804-e525bb98-8a04-11e8-8ca4-b583421af7ea.png)
+
