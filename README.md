@@ -112,5 +112,5 @@ plot4.set_xticklabels(continental['Restaurant Name'], rotation=40, ha="center")
 
 ![figure_2](https://user-images.githubusercontent.com/31384241/42827803-e4f5714a-8a04-11e8-9167-7a705ff9751c.png)
 
-### It turns out, Agent's jack which is nearest to my home is with good rating and not so costly :)
+### It turns out, Agent Jack's Bar (which is nearest to my home) is with good rating and not so costly :)
 ### Ennjoy plotting and ML
