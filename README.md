@@ -108,3 +108,5 @@ plot4 = sns.barplot(x=x_ax2, y=y_ax2, data=continental)
 plot4.set_xticklabels(continental['Restaurant Name'], rotation=40, ha="center")
 ```
 
+![figure_2](https://user-images.githubusercontent.com/31384241/42827803-e4f5714a-8a04-11e8-9167-7a705ff9751c.png)
+![figure_1](https://user-images.githubusercontent.com/31384241/42827804-e525bb98-8a04-11e8-8ca4-b583421af7ea.png)
