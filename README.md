@@ -1,4 +1,4 @@
-# super-tribble
+# super-tribble (Zomato dataset + MatplotLib + Numpy + pandas)
 From Zomato's dataset and implemented only for Pune location, find out which is the best continental restaraunt in Pune by vistalization
 
 #API for Zomato Dataset
@@ -8,8 +8,7 @@ https://developers.zomato.com/api
 
 Codes below are more specific to Pune location only because I live there.
 
-# -*- Best Continental and North Indian restaurant in Pune -*-
-# -*- Visual graphing can be seen on Spyder or iPython Notebook -*-
+# Best Continental and North Indian restaurant in Pune -*-
 
 
 ##============import the libraries============
